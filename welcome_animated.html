@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to the AI Chatbot</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+        :root {
+            --bg-color-start: #0a0a1a;
+            --bg-color-end: #120e21;
+            --primary-color: #8c7ae6;
+            --secondary-color: #6a5acd;
+            --text-color: #e0e0e0;
+            --light-color: #ffffff;
+            --shadow-color: rgba(0, 0, 0, 0.4);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--bg-color-start), var(--bg-color-end));
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: 700;
+            margin-bottom: 0.5em;
+            text-shadow: 2px 2px 4px var(--shadow-color);
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSlideUp 1s ease-out forwards;
+        }
+
+        p {
+            font-size: 1.2em;
+            font-weight: 400;
+            text-align: center;
+            max-width: 600px;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSlideUp 1s ease-out 0.3s forwards;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-item {
+            font-size: 1.1em;
+            background: var(--secondary-color);
+            color: var(--light-color);
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px var(--shadow-color);
+            transition: transform 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        .feature-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .button-container {
+            margin-top: 40px;
+            opacity: 0;
+            animation: fadeIn 1s ease-out 1.2s forwards;
+        }
+
+        .animated-button {
+            padding: 15px 40px;
+            border-radius: 50px;
+            border: none;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: var(--light-color);
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px var(--shadow-color);
+        }
+
+        .animated-button:hover {
+            transform: scale(1.05);
+            background: linear-gradient(45deg, var(--secondary-color), var(--primary-color));
+            box-shadow: 0 8px 20px var(--shadow-color);
+        }
+
+        /* Keyframes for animations */
+        @keyframes fadeInSlideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to the AI Chatbot!</h1>
+        <p>
+            This application showcases powerful NLP capabilities using the latest AI models.
+            Explore a range of features designed for developers and enthusiasts.
+        
+        </p>
+
+        <div class="features">
+            <span class="feature-item" style="animation: fadeInSlideUp 0.6s ease-out 0.5s forwards;">💬 Multi-turn Chat</span>
+            <span class="feature-item" style="animation: fadeInSlideUp 0.6s ease-out 0.7s forwards;">✍️ Summarization</span>
+            <span class="feature-item" style="animation: fadeInSlideUp 0.6s ease-out 0.9s forwards;">🌐 Translation</span>
+            <span class="feature-item" style="animation: fadeInSlideUp 0.6s ease-out 1.1s forwards;">🗣️ Text-to-Speech</span>
+        </div>
+
+        <div class="button-container">
+            <!-- Use a styled hyperlink to navigate by changing the URL query parameter -->
+            <a href="?page=AI+Chatbot" class="animated-button" target="_self" style="text-decoration: none; display: inline-block;">Go to Chatbot</a>
+        </div>
+    </div>
+</body>
+</html>
